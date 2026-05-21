@@ -193,6 +193,9 @@ a:hover {
     .titulo-seccion {
         font-size: 2.2rem;
     }
+    .titulo-seccion span {
+        border-bottom: none !important;
+    }
 
     /* CORRECCIÓN: Etiquetas estilo píldora ajustadas para textos largos */
     .hero-posgrado .d-flex {
