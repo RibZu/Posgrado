@@ -94,8 +94,19 @@ body {
     color: var(--azul-principal);
     border: 1px solid var(--azul-medio);
     font-weight: 600;
-    font-size: 0.95rem;
+    font-size: clamp(0.645rem, 2.5vw, 1.25rem);
+    white-space: normal;    
+    text-align: center;
+    max-width: 100%;         
+    display: inline-block;   
+    word-break: break-word;
 }
+
+.info {
+    flex-wrap: nowrap !important;
+    font-size: clamp(0.575rem, 2.5vw, 1.25rem);
+}
+
 
 /* Pestañas */
 .nav-tabs {
@@ -263,7 +274,7 @@ a:hover {
         font-weight: 600;
         text-transform: uppercase;
         letter-spacing: 1px;
-        font-size: 0.85rem;
+        font-size: clamp(0.6rem, 2.5vw, 1rem);
         color: var(--texto-principal);
         transition: all 0.3s ease;
     }
