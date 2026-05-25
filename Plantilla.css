@@ -244,17 +244,17 @@ a:hover {
         display: none; 
     }
 
-    /* Transformar las pestañas en módulos centrados con Flexbox */
+    
     .nav-tabs {
         border-bottom: none;
-        display: flex;            /* Cambiado de grid a flex */
-        flex-wrap: wrap;          /* Permite el salto de fila */
-        justify-content: center;   /* Centra los elementos de la última fila */
+        display: flex;          
+        flex-wrap: wrap;          
+        justify-content: center;   
         gap: 12px;
         margin-bottom: 2rem !important;
     }
     .nav-item {
-        flex: 0 0 calc(50% - 6px); /* Asigna la mitad de ancho menos la mitad del gap */
+        flex: 0 0 calc(50% - 6px); 
         max-width: 50%;
     }
     .nav-link {
@@ -264,8 +264,8 @@ a:hover {
         padding: 1.2rem 0.5rem !important;
         box-shadow: 0 4px 12px rgba(0,0,0,0.06) !important;
         width: 100%;
-        max-width: 240px;          /* Limita el tamaño para pantallas intermedias */
-        margin: 0 auto;            /* Mantener centrado dentro de su celda flexible */
+        max-width: 240px;          
+        margin: 0 auto;            
         text-align: center;
         display: flex;
         flex-direction: column;
@@ -284,7 +284,7 @@ a:hover {
         border-color: var(--azul-principal) !important;
     }
 
-    /* Inyección mágica de iconos */
+   
     .nav-link::before {
         font-family: "bootstrap-icons";
         font-size: 1.8rem;
@@ -295,14 +295,13 @@ a:hover {
     .nav-link.active::before {
         color: var(--fondo-base);
     }
-    /* Iconos específicos para cada pestaña */
+    
     #perfil-tab::before { content: "\F4D4"; } 
     #plan-tab::before { content: "\F207"; }   
     #requisitos-tab::before { content: "\F4CB"; } 
     #tesis-tab::before { content: "\F6FE"; }  
     #contacto-tab::before { content: "\F84C"; } 
 
-    /* Ajustar títulos internos */
     .titulo-interno {
         font-size: 1.5rem;
         margin-top: 1rem;
@@ -314,7 +313,7 @@ a:hover {
         margin: 10px 0; 
     }
 
-    /* Ajustes finos de tablas y listas para no desbordar pantalla */
+    
     .tabla-plan th, .tabla-plan td {
         padding: 0.6rem;
         font-size: 0.95rem;
@@ -323,11 +322,48 @@ a:hover {
         font-size: 1rem;
     }
 
-    /* Cambios específicos para los botones de descarga de PDF en celular */
+    
     .texto-btn-descarga {
         display: none; 
     }
     .icono-btn-descarga {
         font-size: 1.3rem;
+    }
+}
+
+.caja-autoridades h5 {
+    font-family: var(--fuente-cuerpo);
+    font-size: 1.15rem;
+}
+
+.caja-autoridades p, 
+.caja-autoridades ul li {
+    color: var(--texto-secundario);
+    font-size: 1.05rem;
+}
+
+.caja-autoridades ul li {
+    margin-bottom: 0.4rem;
+}
+
+
+@media (min-width: 992px) {
+    .contacto-grid .titulo-interno {
+        text-align: left;
+    }
+    
+    .contacto-grid .titulo-interno::after {
+        margin: 10px 0; 
+    }
+}
+
+
+@media (max-width: 991px) {
+    .contacto-grid {
+        text-align: center;
+    }
+    
+    .contacto-grid .caja-autoridades {
+        text-align: left; 
     }
 }
